@@ -20,6 +20,8 @@
 }
 .modal .contact {
   float: right;
+  text-decoration: none;
+  color: black;
 }
 
 .container {
