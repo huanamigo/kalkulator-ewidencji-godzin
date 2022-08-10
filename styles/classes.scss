@@ -1,0 +1,71 @@
+.modal {
+  width: min(80vw, 800px);
+  background-color: beige;
+
+  h1 {
+    text-align: center;
+  }
+
+  &::backdrop {
+    background: black;
+    opacity: 0.4;
+  }
+
+  button {
+    font-size: x-large;
+    align-self: center;
+    width: 100px;
+  }
+
+  .contact {
+    float: right;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.container {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 2px;
+  }
+}
+
+.text-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0.7rem;
+  input {
+    font-size: 1rem;
+  }
+
+  #date {
+    visibility: hidden;
+  }
+
+  .p-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .print {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+}
+
+.time-input {
+  position: relative;
+  left: 3px;
+}

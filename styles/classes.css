@@ -1,0 +1,69 @@
+.modal {
+  width: min(80vw, 800px);
+  background-color: beige;
+}
+.modal h1 {
+  text-align: center;
+}
+.modal::-webkit-backdrop {
+  background: black;
+  opacity: 0.4;
+}
+.modal::backdrop {
+  background: black;
+  opacity: 0.4;
+}
+.modal button {
+  font-size: x-large;
+  align-self: center;
+  width: 100px;
+}
+.modal .contact {
+  float: right;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  margin: 2px;
+}
+
+.text-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0.7rem;
+}
+.text-container input {
+  font-size: 1rem;
+}
+.text-container #date {
+  visibility: hidden;
+}
+.text-container .p-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.text-container .print {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+.time-input {
+  position: relative;
+  left: 3px;
+}/*# sourceMappingURL=classes.css.map */

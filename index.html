@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="styles/elements.css" />
+    <link rel="stylesheet" href="styles/classes.css" />
+    <script src="scripts/consts.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <dialog class="modal">
+      <h1>Witaj!</h1>
+      <p>
+        Strona służy do ułatwienia wypełniania ewidencji godzin. Zaraz
+        wytłumaczę ci co robi każde pole i jak z niego skorzystać<br />
+        1) Kliknięcie w kropki w sekcji na samej górze spowoduje pojawienie się
+        pola wyboru dnia zatrudnienia <br />
+        2) Kliknięcie kalendarza przy polu "Miesiąc" pokaże pole wyboru miesiąca
+        oraz roku <br />
+        3) W polu "Nazwisko i imię Zleceniobiorcy" można wpisać domniemane imię
+        i nazwisko <br />
+        4) Aby wybrać z tabeli dzień do którego chcemy przypisać godziny
+        wystarczy kliknąć na dany wiersz, a w polu "Uwagi" pojawią się 2 miejsca
+        na wpisanie godziny wejścia i wyjścia <br />
+        Liczba godzin kalkuluje się automatycznie, a suma wyświetlana jest na
+        samym dole <br />
+        5) Pamiętaj że nie możesz odznaczyć już raz wybranego dnia! (spróbuję
+        kiedyś to dodać) <br />
+        6) Przycisk z napisem "Drukuj" (jak i wszystkie dodatkowe pola) po
+        kliknięciu zniknie i nie będzie widoczny przy drukowaniu. Nie przejmuj
+        się że coś wygląda nie tak jak powinno, przy drukowaniu wszystko ułoży
+        się w odpowiedni sposób
+      </p>
+      <button class="close-modal">OK</button>
+      <a class="contact" href="mailto:ciuciuthemlgpro@gmail.com">Kontakt</a>
+    </dialog>
+
+    <div class="container">
+      <div class="text-container">
+        <div class="text-container">
+          <p>Ewidencja godzin wykonywania umowy zlecenia zawartej w dniu</p>
+          <input type="date" id="date" />
+          <p class="date-picker">
+            . . . . . . . . . . . . . . . . . . . . . . . r.
+          </p>
+        </div>
+
+        <p class="p-left">Miesiąc: <input type="month" lang="pl" /></p>
+        <p class="p-left">
+          Nazwisko i imię Zleceniobiorcy
+          <input type="text" placeholder="Tutaj wpisz swoje imię i nazwisko" />
+        </p>
+        <button onclick="window.print();return false;" class="print">
+          Drukuj
+        </button>
+      </div>
+
+      <table>
+        <tr>
+          <th>
+            Dzień <br />
+            miesiąca
+          </th>
+          <th>
+            Liczba godzin <br />
+            wykonywania <br />
+            umowy zlecenia
+          </th>
+          <th>
+            Podpis <br />
+            Zleceniobiorcy
+          </th>
+          <th>Uwagi</th>
+          <th>
+            Podpis <br />
+            Zleceniodawcy <br />
+            lub osoby przez <br />
+            niego <br />
+            upoważnionej
+          </th>
+        </tr>
+        <tr class="cell">
+          <td class="num">1</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">2</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">3</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">4</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">5</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">6</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">7</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">8</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">9</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">10</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">11</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">12</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">13</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">14</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">15</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">16</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">17</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">18</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">19</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">20</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">21</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">22</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">23</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">24</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">25</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">26</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">27</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">28</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">29</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">30</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="cell">
+          <td class="num">31</td>
+          <td class="result"><hr /></td>
+          <td class="empty"><hr /></td>
+          <td>
+            <hr />
+          </td>
+          <td class="empty"><hr /></td>
+        </tr>
+
+        <tr class="end">
+          <td>
+            Liczba <br />
+            godzin <br />
+            wykonywania <br />
+            umowy <br />
+            zlecenia <br />
+            ogółem
+          </td>
+          <td id="end-result"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
